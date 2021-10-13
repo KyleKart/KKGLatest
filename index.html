@@ -23,8 +23,8 @@ function loadVideo(iframe) {
       console.log(videoNumber);
       var link = data.items[videoNumber].link;
       id = link.substr(link.indexOf("=") + 1);
- window.location.replace("https://youtube.com/embed/" + id + "?controls=1&autoplay=0");
-    }
+document.querySelector('meta[property="twitter:player"]').setAttribute("content", "https://youtube.com/embed/" + id + "?controls=1&autoplay=0");
+  }
   );
 }
 var iframes = document.getElementsByClassName('latestVideoEmbed');
